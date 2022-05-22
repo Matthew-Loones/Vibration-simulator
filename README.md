@@ -4,12 +4,12 @@ For my Stem course, I needed to make a Thesis.
 I decided to code a vibration simulator, which I decided to make in Unity.
 I will put this in the unity asset store so that fellow programmer can use it to make more realistic vibrations.
 This can then be used to make better earthquakes, or anything else which involves vibrations.
-Now I am going to explain how I build it, which issues I came across, and which things can be still aproved upon by a programmer that is more adept than me.
+Now I am going to explain how I build it, which issues I came across, and which things can still be improved upon by a programmer that is more adept than me.
 
 Step 1: coding vibration
 This was actually quite easy, you just add an elastic force to an object and when it's out of balance it vibrates.
-I coded this by giving an equilibrium point to the object when the scene loads, it's begin position.
-Then I constantly apply a force to it, this force is equal to the distance between the object and it's equilibrium force multiplied by the elasticity constant which you can change. 
+I coded this by giving an equilibrium point to the object when the scene is loaded,  namely it's begin position.
+Then I constantly apply a force to it, this force is equal to the distance between the object and it's equilibrium point multiplied by the elasticity constant which you can change. 
 The direction of the force is also towards the equilibrium point, this makes it vibrate when it's out of balance.
 
 step 2: coding waves
@@ -18,14 +18,14 @@ Eventually I found a usefull tutorial that helped me to continue. https://www.yo
 It was still not what I needed but it was a good basis that i tweaked to fit my purpose.
 The video had a tutorial for an explosion, that casted an overlapSphere that would grow when it was activated.
 An overlapSphere creates an array of colliders that are in it's domain.
-The problem is that the same object could be multiple times in the same array, and does be hit multiple times.
+The problem is that the same object could be in the same array multiple times, and does be hit multiple times.
 I fixed this by creating a seperate list that would check if an object of the array was already in the list and would only add them, if it wasn't in the list yet.
 The force would only be aplied on the objects in the list.
-Instead of sending the force away from the source all objects would be sent in the same direction, the vibration direction which you can change.
+Instead of sending the force away from the source, all objects would be sent in the same direction, the vibration direction which you can change.
 I also made it so the force would diminish the further it was from the source.
 The explosion effects made it so that I couldn't change the location of the source so I got rid of it.
 Now all objects with in the max radius, that you can also change, will be affected by the pulse when it reaches them, causing a wave.
-You can also the base-force and speed of the pulse.
+You can also change the base-force and speed of the pulse.
 
 Step 3: shaking ground.
 It is one thing to make individual objects be affected by waves but it is a whole other thing to make an entire plain like the ground shake.
