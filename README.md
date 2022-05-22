@@ -1,4 +1,4 @@
-# Vibration-simulator
+# Earthquake-simulator
 
 For my Stem course, I needed to make a Thesis.
 I decided to code a vibration simulator, which I decided to make in Unity.
