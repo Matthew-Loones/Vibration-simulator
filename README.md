@@ -49,6 +49,12 @@ But at this point of the project I think I got rid of all of them, or atleast th
 Step 5: How to improve
 The final result is a module that simulates realistic(-ish) vibrations.
 But there is still room for improvement.
+So can the vibrations on the mesh still  be optimized, because it works but it can by quite intensive for the computer at larger sizes.
+You can also make it so you can still move objects like launching a canonball, but starts vibrating as it hits a wall for example.
+Because in the current state vibrating objects can't be moved, I suggest making a public enum, where you create 2 states a move state where you can move by making it so the equilibrium point is equal to the current position while in this state, and a vibrate state were it works as usual.
+Then you can switch in between these states when the situation asks for it.
+You can modify it in anyway you like.
+
 
 
 
